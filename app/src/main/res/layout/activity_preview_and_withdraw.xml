@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_rounded_corner_blue"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingTop="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="Preview"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="@id/backIV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/backIV" />
+
+
+        <ImageView
+            android:id="@+id/backIV"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:src="@drawable/back_icon"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topCL">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:gravity="center_vertical"
+            android:id="@+id/nameET"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:autoSizeMaxTextSize="@dimen/_12ssp"
+            android:autoSizeMinTextSize="@dimen/_9ssp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/rounded_corner_gray50_gray_stroke"
+            android:fontFamily="@font/montserrat_bold"
+            android:hint="Enter Bank Name"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.9" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:gravity="center_vertical"
+            android:id="@+id/holderET"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:autoSizeMaxTextSize="@dimen/_12ssp"
+            android:autoSizeMinTextSize="@dimen/_9ssp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/rounded_corner_gray50_gray_stroke"
+            android:fontFamily="@font/montserrat_bold"
+            android:hint="Account Holder Name"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameET"
+            app:layout_constraintWidth_percent="0.9" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/accountET"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:autoSizeMaxTextSize="@dimen/_12ssp"
+            android:autoSizeMinTextSize="@dimen/_9ssp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/rounded_corner_gray50_gray_stroke"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center_vertical"
+            android:hint="Account Number / IBAN"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/holderET"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <TextView
+            android:id="@+id/titleMessageTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="Exchange Rate"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="@id/accountET"
+            app:layout_constraintTop_toBottomOf="@id/accountET" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/haveCL"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleMessageTV">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="You have"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/qtyTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="------"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@id/haveCL">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/firstET"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:autoSizeMaxTextSize="@dimen/_12ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/rounded_corner_gray50_gray_stroke"
+                android:fontFamily="@font/montserrat_bold"
+                android:text=""
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_100"
+                android:textSize="@dimen/_12ssp" />
+
+            <ImageView
+                android:id="@+id/convertBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:src="@drawable/convert_icon"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/secondET"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:autoSizeMaxTextSize="@dimen/_12ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/rounded_corner_gray50_gray_stroke"
+                android:fontFamily="@font/montserrat_bold"
+                android:text=""
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_100"
+                android:textSize="@dimen/_12ssp" />
+
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/withdrawNowBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@drawable/rounded_corner_sky_blue_blue_stroke"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_12sdp"
+            android:text="Withdraw Now"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.9"
+            tools:layout_editor_absoluteY="468dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

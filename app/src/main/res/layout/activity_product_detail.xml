@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/productIV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/app_icon"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius_bottom_left="@dimen/_30sdp"
+        app:riv_corner_radius_bottom_right="@dimen/_30sdp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/backIV"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:padding="@dimen/_1sdp"
+        android:src="@drawable/back_icon"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/favoriteIV"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:src="@drawable/favorite_icon_sky_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productIV" />
+
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="US Dollar"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toStartOf="@id/favoriteIV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productIV" />
+
+
+    <TextView
+        android:id="@+id/quantityAndProCurrencyTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="50,000 Dollar"
+        android:textColor="@color/gray_100"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameTV" />
+
+
+    <TextView
+        android:id="@+id/exCurrencyAndAmountTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="Exchange with AUD at 10000"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quantityAndProCurrencyTV" />
+
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@color/gray_50"
+        app:layout_constraintTop_toBottomOf="@id/exCurrencyAndAmountTV" />
+
+
+    <TextView
+        android:id="@+id/desTitleTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Description"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line1" />
+
+
+    <TextView
+        android:id="@+id/descriptionTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:maxLines="3"
+        android:text="it is a long established fact that a reader
+will be distractesd by the readable content of a page when
+looking at its layout."
+        android:textColor="@color/gray_100"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/desTitleTV" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@color/gray_50"
+        app:layout_constraintTop_toBottomOf="@id/descriptionTV" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buyNowCL"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@drawable/rounded_corner_blue_sky_blue_stroke"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/chatCL"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/buyNowBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_45sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="BUY NOW"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="@id/buyNowCL"
+            app:layout_constraintEnd_toEndOf="@id/buyNowCL"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/buyNowCL"
+            app:layout_constraintTop_toTopOf="@id/buyNowCL" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chatCL"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@drawable/rounded_corner_sky_blue"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/buyNowCL"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.6">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/chatTV"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_45sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="CHAT NOW"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="@id/chatCL"
+            app:layout_constraintEnd_toEndOf="@id/chatCL"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/chatIV"
+            app:layout_constraintTop_toTopOf="@id/chatCL" />
+
+        <ImageView
+            android:id="@+id/chatIV"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/ic_baseline_chat_24"
+            app:layout_constraintBottom_toBottomOf="@id/chatCL"
+            app:layout_constraintEnd_toStartOf="@id/chatTV"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/chatCL"
+            app:layout_constraintTop_toTopOf="@id/chatCL" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

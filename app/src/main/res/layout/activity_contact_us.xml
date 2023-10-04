@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_rounded_corner_blue"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingTop="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="Contact Us"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/favoriteIV" />
+
+
+        <ImageView
+            android:id="@+id/favoriteIV"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/user_dummy_profile"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/backIV"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:src="@drawable/back_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topCL">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="If you have any query you can\n send us email"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="@id/currencyCL"
+                app:layout_constraintTop_toBottomOf="@id/currencyCL" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="Email :"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="@id/currencyCL"
+                app:layout_constraintTop_toBottomOf="@id/currencyCL" />
+
+            <TextView
+                android:id="@+id/desTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:gravity="center"
+                android:text="admin@monymarkets.com"
+                android:textColor="@color/gray_100"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="@id/currencyCL"
+                app:layout_constraintTop_toBottomOf="@id/currencyCL" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="Or Reach Us at :"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="@id/currencyCL"
+                app:layout_constraintTop_toBottomOf="@id/currencyCL" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:gravity="center"
+                android:text="1542 Dover Creek Ln,\nLawrenceville, GA, 30045"
+                android:textColor="@color/gray_100"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="@id/currencyCL"
+                app:layout_constraintTop_toBottomOf="@id/currencyCL" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/doneBtn"
+        android:visibility="invisible"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/rounded_corner_sky_blue_blue_stroke"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_12sdp"
+        android:text="Done"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.9" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

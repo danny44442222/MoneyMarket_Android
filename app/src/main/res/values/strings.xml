@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">MonyMarket</string>
+
+    <string-array name="currency">
+        <!--        <item>USD</item>-->
+        <!--        <item>AUD</item>-->
+        <!--        <item>INR</item>-->
+        <!--        <item>TRY</item>-->
+        <!--        <item>BGN</item>-->
+        <!--        <item>ISK</item>-->
+        <!--        <item>BRL</item>-->
+        <!--        <item>JPY</item>-->
+        <!--        <item>ZAR</item>-->
+        <!--        <item>CAD</item>-->
+        <!--        <item>KRW</item>-->
+        <!--        <item>CHF</item>-->
+        <!--        <item>MXN</item>-->
+        <!--        <item>CNY</item>-->
+        <!--        <item>MYR</item>-->
+        <!--        <item>CZK</item>-->
+        <!--        <item>NOK</item>-->
+        <!--        <item>DKK</item>-->
+        <!--        <item>NZD</item>-->
+        <!--        <item>EUR</item>-->
+        <!--        <item>PHP</item>-->
+        <!--        <item>GBP</item>-->
+        <!--        <item>PLN</item>-->
+        <!--        <item>HKD</item>-->
+        <!--        <item>RON</item>-->
+        <!--        <item>HRK</item>-->
+        <!--        <item>RUB</item>-->
+        <!--        <item>HUF</item>-->
+        <!--        <item>SEK</item>-->
+        <!--        <item>IDR</item>-->
+        <!--        <item>SGD</item>-->
+        <!--        <item>ILS</item>-->
+        <!--        <item>THB</item>-->
+        <!--        <item>NGN</item>-->
+        <!--        <item>GHS</item>-->
+        <!--        <item>KES</item>-->
+        <!--        <item>UGX</item>-->
+
+
+        <item>NGN"</item>
+        <item>GHS"</item>
+        <item>KES"</item>
+        <item>UGX"</item>
+        <item>ZAR"</item>
+        <item>TZS"</item>
+        <item>AUD"</item>
+        <item>CHF"</item>
+        <item>EUR"</item>
+        <item>BRL"</item>
+        <item>MYR"</item>
+        <item>BGN"</item>
+        <item>CAD"</item>
+        <item>MXN"</item>
+        <item>HRK"</item>
+        <item>NZD"</item>
+        <item>NOK"</item>
+        <item>DKK"</item>
+        <item>PLN"</item>
+        <item>RON"</item>
+        <item>SGD"</item>
+        <item>HKD"</item>
+        <item>HUF"</item>
+        <item>CHF"</item>
+        <item>THB"</item>
+        <item>AED"</item>
+        <item>USD"</item>
+        <item>JPY"</item>
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_cart_item_detail">CartItemDetailActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <string name="facebook_app_id">1096009301118331</string>
+    <string name="fb_login_protocol_scheme">fb1096009301118331</string>
+    <string name="facebook_client_token">56789</string>
+
+
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/rounded_corner_gray50_gray_stroke"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/productIV"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/notification_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/_18sdp" />
+
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="US Dollar"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginTop="@dimen/_2sdp"
+            app:layout_constraintBottom_toTopOf="@+id/descriptionTV"
+            app:layout_constraintStart_toEndOf="@id/productIV"
+            app:layout_constraintTop_toTopOf="@id/productIV" />
+
+
+        <TextView
+            android:id="@+id/descriptionTV"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Drew add yor produce in Favorite"
+            android:textColor="@color/gray_100"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toEndOf="@id/productIV"
+            app:layout_constraintTop_toBottomOf="@id/nameTV"
+            app:layout_constraintBottom_toBottomOf="@+id/productIV"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

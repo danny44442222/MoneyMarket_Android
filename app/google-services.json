@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "247944073059",
+    "firebase_url": "https://monymarket-7aca4-default-rtdb.firebaseio.com",
+    "project_id": "monymarket-7aca4",
+    "storage_bucket": "monymarket-7aca4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247944073059:android:44b84ce9f42c65d1334d56",
+        "android_client_info": {
+          "package_name": "com.buzzware.monymarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "247944073059-61dtbg7af63rsbdf6k9ffvprr9gf2o8g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.buzzware.monymarket",
+            "certificate_hash": "90ba77e1abfb48f7a5f983eea88c1be45b2946ff"
+          }
+        },
+        {
+          "client_id": "247944073059-ekm8l20cu2gej573o11u2pj5fml9pt7b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB--6FOW9nKE9oRLKGBOGOcDMqb4w1EEcU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "247944073059-ekm8l20cu2gej573o11u2pj5fml9pt7b.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "247944073059-7g39stq9ojgakb22t2vvmc8cr4h9ls1a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.buzzware.MoneyMarkets"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

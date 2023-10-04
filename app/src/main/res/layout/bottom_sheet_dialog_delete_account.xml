@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:background="@drawable/top_rounded_corner_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_rounded_corner_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_20sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/dialogTitleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="Alert"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/productIV" />
+        <TextView
+            android:id="@+id/messageTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="Are you sure you want to delete this account!"
+            android:textColor="@color/gray_100"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/productIV" />
+
+      <androidx.appcompat.widget.LinearLayoutCompat
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_marginTop="@dimen/_25sdp"
+          android:weightSum="2">
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/cancelBtn"
+              android:layout_marginTop="@dimen/_5sdp"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/_45sdp"
+              android:background="@drawable/rounded_corner_white_sky_blue_stroke"
+              android:fontFamily="@font/montserrat_bold"
+              android:gravity="center"
+              android:text="Cancel"
+              android:layout_marginRight="@dimen/_5sdp"
+              android:layout_weight="1"
+              android:textAlignment="center"
+              android:textColor="@color/blue"
+              android:textSize="@dimen/_12ssp" />
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/deleteBtn"
+              android:layout_weight="1"
+              android:layout_marginTop="@dimen/_5sdp"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/_45sdp"
+              android:background="@drawable/rounded_corner_blue_sky_blue_stroke"
+              android:fontFamily="@font/montserrat_bold"
+              android:gravity="center"
+              android:layout_marginLeft="@dimen/_5sdp"
+              android:text="Delete"
+              android:textAlignment="center"
+              android:textColor="@color/white"
+              android:textSize="@dimen/_12ssp" />
+
+      </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

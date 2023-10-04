@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_rounded_corner_blue"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingTop="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="Wallet"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/backIV"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:src="@drawable/back_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardCL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/rounded_corner_blue_gradient"
+        android:padding="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@id/topCL">
+
+        <TextView
+            android:id="@+id/userNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Andrew Ainsley"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/convertBtn"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Convert"
+            android:background="@drawable/less_rounded_corner_sky_blue_white_stroke"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/starIV"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/star_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/addFundBtn"
+            android:visibility="visible"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/rounded_corner_blue_sky_blue_stroke"
+            android:gravity="center"
+            android:text="Add funds"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintTop_toTopOf="@id/amountTV"
+            app:layout_constraintBottom_toBottomOf="@id/amountTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8ssp" />
+
+
+        <TextView
+            android:id="@+id/balanceTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Your Balance"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/starIV"
+            />
+        <TextView
+            android:layout_marginLeft="@dimen/_6sdp"
+            android:id="@+id/amountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="9379"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_30ssp"
+            app:layout_constraintTop_toTopOf="@id/starIV"
+            app:layout_constraintStart_toEndOf="@id/starIV"
+            app:layout_constraintBottom_toBottomOf="@id/starIV"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/cardCL"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/purchasedTV"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Purchased"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:nestedScrollingEnabled="false"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:id="@+id/historyRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/historyTitleTV"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="My Currency"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:nestedScrollingEnabled="false"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:id="@+id/myCurrencyRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

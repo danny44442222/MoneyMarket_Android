@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_rounded_corner_blue"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingTop="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="Place Ad"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topCL">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/titleTVText"
+                app:layout_constraintWidth_percent="0.9"
+                android:layout_width="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"
+                android:paddingTop="@dimen/_10sdp"
+                android:textSize="@dimen/_12ssp"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/nameET"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:autoSizeMaxTextSize="@dimen/_12ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/rounded_corner_gray50_gray_stroke"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Title"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_100"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleTVText"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <TextView
+                android:id="@+id/youWantTVText"
+                app:layout_constraintWidth_percent="0.9"
+                android:layout_width="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="wrap_content"
+                android:text="What currency you want sell?"
+                app:layout_constraintTop_toBottomOf="@id/nameET"
+                android:textColor="@color/black"
+                android:paddingTop="@dimen/_10sdp"
+                android:textSize="@dimen/_12ssp"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/currencyCL"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/youWantTVText"
+                app:layout_constraintWidth_percent="0.9">
+
+                <View
+                    android:id="@+id/currencyView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/rounded_corner_gray50_gray_stroke"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/currencySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/currency"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:popupBackground="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/currencyView"
+                    app:layout_constraintEnd_toEndOf="@+id/currencyView"
+                    app:layout_constraintStart_toStartOf="@+id/currencyView"
+                    app:layout_constraintTop_toTopOf="@+id/currencyView" />
+
+                <ImageView
+                    android:id="@+id/currencyIV"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:padding="11dp"
+                    android:src="@drawable/down_erow"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@id/currencyView"
+                    app:layout_constraintEnd_toEndOf="@id/currencyView"
+                    app:layout_constraintTop_toTopOf="@id/currencyView" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/howMuchTVText"
+                app:layout_constraintWidth_percent="0.9"
+                android:layout_width="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="wrap_content"
+                android:text="How much of this currency do you want to sell?"
+                app:layout_constraintTop_toBottomOf="@id/currencyCL"
+                android:textColor="@color/black"
+                android:paddingTop="@dimen/_10sdp"
+                android:textSize="@dimen/_12ssp"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/adQuantityET"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:autoSizeMaxTextSize="@dimen/_12ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/rounded_corner_gray50_gray_stroke"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Quantity"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/howMuchTVText"
+                app:layout_constraintWidth_percent="0.9" />
+            <TextView
+                android:id="@+id/exCurrencyTVText"
+                app:layout_constraintWidth_percent="0.9"
+                android:layout_width="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="wrap_content"
+                android:text="What currency you want?"
+                app:layout_constraintTop_toBottomOf="@id/adQuantityET"
+                android:textColor="@color/black"
+                android:paddingTop="@dimen/_10sdp"
+                android:textSize="@dimen/_12ssp"
+                />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/exCurrencyCL"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/exCurrencyTVText"
+                app:layout_constraintWidth_percent="0.9">
+
+                <View
+                    android:id="@+id/exCurrencyView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/rounded_corner_gray50_gray_stroke"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/exCurrencySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/currency"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:popupBackground="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/exCurrencyView"
+                    app:layout_constraintEnd_toEndOf="@+id/exCurrencyView"
+                    app:layout_constraintStart_toStartOf="@+id/exCurrencyView"
+                    app:layout_constraintTop_toTopOf="@+id/exCurrencyView" />
+
+                <ImageView
+                    android:id="@+id/exCurrencyIV"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:padding="11dp"
+                    android:src="@drawable/down_erow"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@id/exCurrencyView"
+                    app:layout_constraintEnd_toEndOf="@id/exCurrencyView"
+                    app:layout_constraintTop_toTopOf="@id/exCurrencyView" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/exPriceTVText"
+                app:layout_constraintWidth_percent="0.9"
+                android:layout_width="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="wrap_content"
+                android:text="What is the rate you are willing?"
+                app:layout_constraintTop_toBottomOf="@id/exCurrencyCL"
+                android:textColor="@color/black"
+                android:paddingTop="@dimen/_10sdp"
+                android:textSize="@dimen/_12ssp"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/exPriceET"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:autoSizeMaxTextSize="@dimen/_12ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/rounded_corner_gray50_gray_stroke"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Exchange Currency"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/exPriceTVText"
+                app:layout_constraintWidth_percent="0.9" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/descriptionET"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:autoSizeMaxTextSize="@dimen/_12ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/rounded_corner_gray50_gray_stroke"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Description"
+                android:gravity="top"
+                android:maxLines="3"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/exPriceET"
+                app:layout_constraintWidth_percent="0.9" />
+
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/confirmBtn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/rounded_corner_sky_blue_blue_stroke"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="Confirm Now"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descriptionET"
+                app:layout_constraintWidth_percent="0.9" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintTop_toBottomOf="@id/confirmBtn"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

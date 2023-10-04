@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/rounded_corner_gray50_gray_stroke"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/youGetTittleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="Selling:"
+            android:textColor="@color/gray_100"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/youGetTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="---"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/youGetTittleTV" />
+
+        <TextView
+            android:id="@+id/exTittleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="Conversion rate"
+            android:textColor="@color/gray_100"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/exTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="---"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/exTittleTV" />
+
+        <TextView
+            android:id="@+id/youPayTittleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="You Pay:"
+            android:textColor="@color/gray_100"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/youGetTV" />
+
+
+        <TextView
+            android:id="@+id/youPayTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="---"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/youPayTittleTV" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_26sdp"
+            android:background="@drawable/less_rounded_corner_sky_blue_blue_stroke"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:text="Buy Now"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/youPayTV"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

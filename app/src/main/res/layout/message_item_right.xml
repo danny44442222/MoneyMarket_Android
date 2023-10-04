@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/_30sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_2sdp">
+
+    <RelativeLayout
+        android:id="@+id/topRL"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/less_rounded_corner_blue"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_12sdp">
+
+        <TextView
+            android:id="@+id/messageTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:lineSpacingExtra="5dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="normal" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageIV"
+            app:riv_corner_radius="@dimen/_10sdp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:src="@drawable/app_icon" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/timeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:fontFamily="@font/montserrat_regular"
+        android:lineSpacingExtra="5dp"
+        android:includeFontPadding="false"
+        android:layout_below="@id/topRL"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/grey_font"
+        android:textStyle="normal" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:padding="3dp">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/userImageIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:riv_corner_radius="@dimen/_8sdp"
+            android:src="@drawable/app_icon" />
+    </RelativeLayout>
+</RelativeLayout>

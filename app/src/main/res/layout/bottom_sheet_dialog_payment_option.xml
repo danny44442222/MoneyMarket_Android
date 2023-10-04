@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top_rounded_corner_white"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_rounded_corner_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/dialogTitleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="Preview Conversion"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/productIV" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/rounded_corner_gray50_gray_stroke"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/cardIV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/master_card_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="@dimen/_18sdp"
+                android:maxLines="1"
+                android:text="**** **** **** 4647"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@id/radioIV"
+                app:layout_constraintStart_toEndOf="@id/cardIV"/>
+
+            <ImageView
+                android:id="@+id/radioIV"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/radio_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/newCardTV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/rounded_corner_sky_blue_blue_stroke"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="Add new Card"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/proceedTV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/rounded_corner_blue_sky_blue_stroke"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="Pay Now"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

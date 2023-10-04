@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_gray50_gray_stroke"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:visibility="gone"
+            android:id="@+id/productIV"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/app_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/_18sdp" />
+
+
+
+        <TextView
+            android:id="@+id/receiveTitleTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="You have receive"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/productIV"
+            app:layout_constraintTop_toTopOf="@id/productIV" />
+
+
+        <TextView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/adPriceTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="50,000 Dollar"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toEndOf="@id/productIV"
+            app:layout_constraintTop_toBottomOf="@id/receiveTitleTV" />
+
+        <ImageView
+            android:id="@+id/convertIV"
+            android:adjustViewBounds="true"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/convert_icon"
+            app:layout_constraintEnd_toEndOf="@id/adPriceTV"
+            app:layout_constraintTop_toBottomOf="@id/adPriceTV"
+            app:layout_constraintStart_toStartOf="@id/adPriceTV"/>
+
+
+        <TextView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/exPriceTV"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="50,000 Dollar"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toEndOf="@id/productIV"
+            app:layout_constraintTop_toBottomOf="@id/convertIV" />
+
+        <TextView
+            android:id="@+id/acceptBtn"
+            android:visibility="visible"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/less_rounded_corner_blue"
+            android:gravity="center"
+            android:text="Accept"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/exPriceTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp" />
+        <TextView
+            android:id="@+id/rejectBtn"
+            android:visibility="visible"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/less_rounded_corner_sky_blue"
+            android:gravity="center"
+            android:text="Reject"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/exPriceTV"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

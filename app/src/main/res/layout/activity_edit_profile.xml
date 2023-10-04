@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_rounded_corner_blue"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingTop="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="Edit Profile"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/favoriteIV" />
+
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/favoriteIV"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/user_dummy_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/backIV"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:src="@drawable/back_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topCL">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_gravity="bottom">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/nameET"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_80sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:autoSizeMaxTextSize="@dimen/_12ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/rounded_corner_gray50_gray_stroke"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Anderew Ainsley"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.9" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lastNameET"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:autoSizeMaxTextSize="@dimen/_12ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/rounded_corner_gray50_gray_stroke"
+                android:fontFamily="@font/montserrat_bold"
+                android:text=""
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameET"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/emailET"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:autoSizeMaxTextSize="@dimen/_12ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/rounded_corner_gray50_gray_stroke"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Anderewainsley@info.com"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lastNameET"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/phoneET"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:autoSizeMaxTextSize="@dimen/_12ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/rounded_corner_gray50_gray_stroke"
+                android:fontFamily="@font/montserrat_bold"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emailET"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/phoneLayout"
+                android:layout_width="0dp"
+                android:background="@android:color/transparent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_6sdp"
+                app:layout_constraintEnd_toEndOf="@id/phoneET"
+                app:layout_constraintBottom_toBottomOf="@id/phoneET"
+                app:layout_constraintTop_toTopOf="@id/phoneET"
+                app:layout_constraintStart_toStartOf="@id/phoneET">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/country_code_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:ccp_defaultNameCode="AE"
+                    app:ccpDialog_backgroundColor="@color/white"
+                    app:ccpDialog_textColor="@color/black"
+                    app:ccp_contentColor="@color/black"
+                    app:ccp_hintExampleNumber="true"
+                    app:ccp_hintExampleNumberType="MOBILE"
+                    app:ccp_showFlag="true"
+                    app:ccp_showNameCode="false"
+                    app:ccp_showPhoneCode="true"
+                    app:ccp_textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/phoneLayout"
+                    app:layout_constraintStart_toStartOf="@id/phoneLayout"
+                    app:layout_constraintTop_toTopOf="@id/phoneLayout" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/phoneTV"
+                    android:layout_width="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="Phone number"
+                    android:inputType="number|phone"
+                    android:imeOptions="actionDone"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/country_code_picker"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/dateTV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:autoSizeMaxTextSize="@dimen/_12ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/rounded_corner_gray50_gray_stroke"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical"
+                android:text="Date of Birth"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phoneET"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/addressET"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:autoSizeMaxTextSize="@dimen/_12ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/rounded_corner_gray50_gray_stroke"
+                android:fontFamily="@font/montserrat_bold"
+                android:text=""
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dateTV"
+                app:layout_constraintWidth_percent="0.9" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/currencyCL"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addressET"
+                app:layout_constraintWidth_percent="0.9">
+
+                <View
+                    android:id="@+id/currencyView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/rounded_corner_gray50_gray_stroke"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <Spinner
+                    android:id="@+id/currencySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/currency"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:popupBackground="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/currencyView"
+                    app:layout_constraintEnd_toEndOf="@+id/currencyView"
+                    app:layout_constraintStart_toStartOf="@+id/currencyView"
+                    app:layout_constraintTop_toTopOf="@+id/currencyView" />
+
+                <ImageView
+                    android:id="@+id/currencyIV"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:padding="11dp"
+                    android:src="@drawable/down_erow"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@id/currencyView"
+                    app:layout_constraintEnd_toEndOf="@id/currencyView"
+                    app:layout_constraintTop_toTopOf="@id/currencyView" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/bioET"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:autoSizeMaxTextSize="@dimen/_12ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/rounded_corner_gray50_gray_stroke"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Bio"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/currencyCL"
+                app:layout_constraintWidth_percent="0.9" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/updateBtn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/rounded_corner_blue_white_stroke"
+                        android:gravity="center"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="Update Now"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bioET"
+                app:layout_constraintWidth_percent="0.9" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

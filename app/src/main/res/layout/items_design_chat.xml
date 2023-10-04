@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/myMessageTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="@drawable/rounded_corner_sky_blue"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:minHeight="@dimen/_40sdp"
+            android:padding="@dimen/_10sdp"
+            android:text="Lorem Ipsum is simply dummy text of "
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.65" />
+
+        <TextView
+            android:id="@+id/myTimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="07:00 PM"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/myMessageTV" />
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/userIV"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_dummy_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/myTimeTV"
+            app:riv_corner_radius="@dimen/_15sdp" />
+
+        <TextView
+            android:id="@+id/otherMessageTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="@drawable/rounded_corner_gray50_gray_stroke"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:minHeight="@dimen/_40sdp"
+            android:padding="@dimen/_10sdp"
+            android:text="Lorem Ipsum is simply dummy text of "
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toEndOf="@id/userIV"
+            app:layout_constraintTop_toTopOf="@id/userIV"
+            app:layout_constraintWidth_percent="0.65" />
+
+        <TextView
+            android:id="@+id/otherTimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="07:01 PM"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/otherMessageTV" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

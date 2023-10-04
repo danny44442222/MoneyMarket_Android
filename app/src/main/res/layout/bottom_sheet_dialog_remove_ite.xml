@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:background="@drawable/top_rounded_corner_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_rounded_corner_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_20sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/dialogTitleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="Remove From Cart?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/productIV" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/rounded_corner_gray50_gray_stroke"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/productIV"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dummy_product_image1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="@dimen/_18sdp" />
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/trashIV"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/trash_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/nameTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="US Dollar"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toEndOf="@id/productIV"
+                app:layout_constraintTop_toTopOf="@id/productIV" />
+
+
+            <TextView
+                android:id="@+id/descriptionTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="50,000 Dollar"
+                android:textColor="@color/gray_100"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toEndOf="@id/productIV"
+                app:layout_constraintTop_toBottomOf="@id/nameTV" />
+
+            <View
+                android:id="@+id/counterView"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/rounded_corner_white_gray_stroke"
+                app:layout_constraintBottom_toBottomOf="@id/productIV"
+                app:layout_constraintStart_toEndOf="@id/productIV"
+                app:layout_constraintTop_toBottomOf="@id/descriptionTV" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/minusIV"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/minus_icon"
+                app:layout_constraintBottom_toBottomOf="@id/counterView"
+                app:layout_constraintStart_toStartOf="@id/counterView"
+                app:layout_constraintTop_toTopOf="@id/counterView" />
+
+            <TextView
+                android:id="@+id/countTV"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="@id/counterView"
+                app:layout_constraintEnd_toStartOf="@id/addIV"
+                app:layout_constraintStart_toEndOf="@id/minusIV"
+                app:layout_constraintTop_toTopOf="@id/counterView" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/addIV"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/add_icon"
+                app:layout_constraintBottom_toBottomOf="@id/counterView"
+                app:layout_constraintEnd_toEndOf="@id/counterView"
+                app:layout_constraintTop_toTopOf="@id/counterView" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@color/gray_50"
+            app:layout_constraintTop_toBottomOf="@id/descriptionTV" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addToCartCL"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cancelTV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/rounded_corner_blue_sky_blue_stroke"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="@id/addToCartCL"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/addToCartCL"
+                app:layout_constraintWidth_percent="0.46" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/removeTV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/rounded_corner_sky_blue_blue_stroke"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="Yes, Remove"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="@id/addToCartCL"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/addToCartCL"
+                app:layout_constraintWidth_percent="0.46" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

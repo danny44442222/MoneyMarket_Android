@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_30sdp"
+    android:layout_marginBottom="@dimen/_2sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topRL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:background="@drawable/less_rounded_corner_sky_blue"
+        android:padding="@dimen/_12sdp">
+
+        <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/messageTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="5dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="normal" />
+
+
+        <TextView
+            android:id="@+id/payBtn"
+            android:visibility="gone"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:background="@drawable/rounded_corner_blue_white_stroke"
+            android:gravity="center"
+            android:text="PAY NOW"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintTop_toBottomOf="@id/messageTV"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8ssp" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageIV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:src="@drawable/app_icon"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/_10sdp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/timeTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/topRL"
+        android:text=""
+        android:layout_marginLeft="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/grey_font"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="normal" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/btnProfile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_width="@dimen/_38sdp"
+        android:layout_height="@dimen/_38sdp"
+        android:padding="3dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/userImageIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/app_icon"
+            app:riv_corner_radius="@dimen/_8sdp" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
